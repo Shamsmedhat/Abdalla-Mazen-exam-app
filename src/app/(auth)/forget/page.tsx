@@ -1,0 +1,43 @@
+import React from "react";
+import ExamAppSide from "../_components/exam-app-side";
+import ForgetPassword from "../_components/forget-password";
+import Link from "next/link";
+
+export default function ForgetPasswordPage() {
+  return (
+    <>
+      <main className="flex">
+        {/* Feature side */}
+        <aside className="w-1/2">
+          <ExamAppSide />
+        </aside>
+
+        {/* Forget side */}
+        <section className="w-1/2 flex justify-center flex-col  items-center ">
+          <div className=" flex flex-col space-y-4  ">
+            {/* Headline */}
+            <h1 className="font-bold text-3xl py-6 text-gray-800 font-inter">
+              Forgot Password
+            </h1>
+
+            {/* Subtitle */}
+            <p className="mt-2 text-gray-500 font-normal">
+              Don’t worry, we will help you recover your account.
+            </p>
+
+            {/* Forget component */}
+            <ForgetPassword />
+
+            {/* Register link */}
+            <span className="mt-9  text-gray-500">
+              Don’t have an account ?{" "}
+              <Link href="/register" className="text-blue-600">
+                Create yours
+              </Link>
+            </span>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
